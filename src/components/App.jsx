@@ -4,6 +4,8 @@ function App() {
   let initialTime = new Date().toLocaleTimeString();
   const [time, setTime] = useState(initialTime);
 
+  setInterval(getTime, 1000);
+
   function getTime() {
     let newTime = new Date().toLocaleTimeString();
     setTime(newTime);
